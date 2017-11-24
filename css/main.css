@@ -1,0 +1,121 @@
+/* general */
+
+body{
+  background-color: lightgray;
+  padding: 3vw;
+}
+
+.div-container{
+  width: 100%;
+  position: relative;
+}
+
+.overlay-abs{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.bordered{
+  border: 2px solid lime;
+}
+
+.hide-me{
+  opacity: 0;
+}
+
+
+
+
+/* homepage: general  */
+
+
+#div-img-hmpg-wrapper{
+  width: 100%;
+}
+
+#div-img-hmpg-hotspots{
+  width: 100%;
+}
+
+#img-hmpg-bkgd{
+  width: 100%;
+  height: auto;
+}
+
+.div-img-hmpg-wrapper{
+  position: relative;
+}
+
+.div-img-hmpg-hotspots{
+  position: relative;
+}
+
+
+#div-img-overlay-abs-htspt, #div-img-overlay-abs-img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60vw;
+}
+
+#div-img-htspt-container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+/* homepage: under construction */
+
+#div-under-construction{
+  width:  60vw;
+  height: 10vw;
+  z-index: 30;
+  top: 30vw;
+  left: 18vw;
+  position: absolute;
+}
+
+#h1-under-construction-msg{
+  font-family: 'Roboto Slab', serif;
+  font-size: 6vw;
+  color: #72BC93;
+}
+
+
+
+
+
+
+
+
+/* homepage: nav */
+
+.div-htspt{
+  position: absolute;
+  width: 10vw;
+  height: 4vw;
+  top: 10vw;
+  cursor: pointer;
+}
+
+#div-htspt-about{
+  left: 33vw;
+}
+
+#div-htspt-schedule{
+  left: 47vw;
+}
+
+#div-htspt-sign-up{
+  left: 60vw;
+}
+
+#div-htspt-map{
+  left: 75vw;
+}
