@@ -2,7 +2,7 @@
 
 This is the repository for the freeCodeCamp Accra website.
 
-For now, you can see the site at: (silly-porter.surge.sh)[silly-porter.surge.sh]
+For now, you can see the site at: [silly-porter.surge.sh](silly-porter.surge.sh)
 
 Anyone can contribute.
 
