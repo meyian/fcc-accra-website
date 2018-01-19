@@ -110,37 +110,39 @@ $(function(){
     return boolIsShowing;
   }
 
-  function switchToSignupPage(evt){
+  function switchToPage(evt, strType){
 
-    console.log("switchToSignupPage > alpha.");
+    console.log("switchToPage > alpha.");
+
+    strType = strType || "signup";
+
+    var strUrl = "";
+
+    switch (strType) {
+      case "signup":
+        var strUrl = "./signup.partial.html";
+        break;
+      case "about":
+        var strUrl = "./about.partial.html";
+        break;
+      default:
+
+    }
 
     var strSelector = ".div-container";
-    var strUrl = "./signup.partial.html";
 
     fadeOutElement(strSelector, () => {
 
-      console.log("switchToSignupPage > faded out.");
-
       $.get(strUrl).
         done((data) => {
-
-          console.log("switchToSignupPage > done: ", data);
-
           $(strSelector).html(data);
-
-          // signupInit();
-
           fadeInElement(strSelector);
         }).
         fail((data) => {
-
-          console.log("switchToSignupPage > fail: ", data);
-
-          fadeInElement(strSelector, () => {
-            console.log("switchToSignupPage > faded in.");
-          });
+          fadeInElement(strSelector);
         });
-    })
+
+    });
   }
 
   function initHandlers(){
@@ -148,6 +150,9 @@ $(function(){
     var objThis;
     var strSelector = "#div-htspt-container-sign-up-types";
     var strMultipleSelectors = "#div-htspt-container-sign-up-types, #div-htspt-sign-up, #div-htspt-container-sign-up-types *, #div-htspt-sign-up *";
+
+
+
 
     var fnCurryOver = (evt) => {
 
@@ -164,13 +169,15 @@ $(function(){
       }
     };
 
-    $(".div-htspt:not(#div-htspt-sign-up), .div-htspt-sign-up:not(#div-htspt-sign-up-fcc-usernames, #div-htspt-sign-up-fcc-usernames-selected)").click(inProgressClickHandler.bind(objThis));
-
-    $("#div-htspt-sign-up, #div-htspt-sign-up *").mouseover(fnCurryOver);
-
-    $("#div-htspt-sign-up-fcc-usernames").click(switchToSignupPage.bind(objThis));
-
-    $(strMultipleSelectors).mouseout(fnCurryOut);
+    // $(".div-htspt:not(#div-htspt-sign-up),
+    // .div-htspt-sign-up:not(#div-htspt-sign-up-fcc-usernames,
+    //   #div-htspt-sign-up-fcc-usernames-selected)").click(inProgressClickHandler.bind(objThis));
+    //
+    // $("#div-htspt-sign-up, #div-htspt-sign-up *").mouseover(fnCurryOver);
+    //
+    // $("#div-htspt-sign-up-fcc-usernames").click(switchToPage.bind(objThis));
+    //
+    // $(strMultipleSelectors).mouseout(fnCurryOut);
   }
 
   function catastrophicFailure(strErrMsg){
@@ -178,13 +185,17 @@ $(function(){
   }
 
 
-
+  function jumpToPage(){
+    var strCurrUrl = window.location.href;
+    console.log("jumpToPage | strCurrUrl: ", strCurrUrl);
+  }
 
   function init(){
     console.log('line 32. init');
 
     addVisitor();
     initHandlers();
+    jumpToPage();
   }
 
 

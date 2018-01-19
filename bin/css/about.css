@@ -1,0 +1,25 @@
+/* freeCodeCamp > about.css */
+
+#div-about-text{
+  position: absolute;
+  top: 27vw;
+  left: 14vw;
+  width: 66vw;
+  height: 31vw;
+  /*border: 3px black dashed;*/
+  overflow: scroll;
+}
+
+
+#h1-fcc-title{
+  padding-top: 0;
+  margin-top: 1vw;
+}
+
+#div-about-text h1{
+  font-size: 2.0vw;
+}
+
+#div-about-text p, #div-about-text a, #div-about-text span{
+  font-size: 1.5vw;
+}

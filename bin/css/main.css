@@ -1,7 +1,8 @@
 /* general */
 
 body{
-  background-color: lightgray;
+  /*background-color: lightgray;*/
+  background: #fff;
   padding: 3vw;
   position: relative;
 }
@@ -96,6 +97,7 @@ body{
   font-size: 6vw;
   position: relative;
   left: 5vw;
+  top: 1vw;
 }
 
 /* homepage: under construction */
@@ -144,6 +146,11 @@ body{
 
 #div-htspt-about{
   left: 33vw;
+  position: absolute;
+  cursor: pointer;
+  height: 3.5vw;
+  width: 10vw;
+  top: 10.2vw;
 }
 
 #div-htspt-schedule{

@@ -110,37 +110,40 @@ $(function(){
     return boolIsShowing;
   }
 
-  function switchToSignupPage(evt){
+  // todo: validation
+  function switchToPage(evt, strType){
 
-    console.log("switchToSignupPage > alpha.");
+    console.log("switchToPage > alpha.");
+
+    strType = strType || "signup";
+
+    var strUrl = "";
+
+    switch (strType) {
+      case "signup":
+        var strUrl = "./signup.partial.html";
+        break;
+      case "about":
+        var strUrl = "./about.partial.html";
+        break;
+      default:
+
+    }
 
     var strSelector = ".div-container";
-    var strUrl = "./signup.partial.html";
 
     fadeOutElement(strSelector, () => {
 
-      console.log("switchToSignupPage > faded out.");
-
       $.get(strUrl).
         done((data) => {
-
-          console.log("switchToSignupPage > done: ", data);
-
           $(strSelector).html(data);
-
-          // signupInit();
-
           fadeInElement(strSelector);
         }).
         fail((data) => {
-
-          console.log("switchToSignupPage > fail: ", data);
-
-          fadeInElement(strSelector, () => {
-            console.log("switchToSignupPage > faded in.");
-          });
+          fadeInElement(strSelector);
         });
-    })
+
+    });
   }
 
   function initHandlers(){
@@ -148,6 +151,13 @@ $(function(){
     var objThis;
     var strSelector = "#div-htspt-container-sign-up-types";
     var strMultipleSelectors = "#div-htspt-container-sign-up-types, #div-htspt-sign-up, #div-htspt-container-sign-up-types *, #div-htspt-sign-up *";
+
+    console.log("freeCodeCamp > main.js > initHandlers");
+
+    $("#div-htspt-about").click((evt) => {
+      // console.log("foo");
+      switchToPage.call(objThis, evt, "about");
+    });
 
     var fnCurryOver = (evt) => {
 
@@ -168,7 +178,7 @@ $(function(){
 
     $("#div-htspt-sign-up, #div-htspt-sign-up *").mouseover(fnCurryOver);
 
-    $("#div-htspt-sign-up-fcc-usernames").click(switchToSignupPage.bind(objThis));
+    $("#div-htspt-sign-up-fcc-usernames").click(switchToPage.bind(objThis));
 
     $(strMultipleSelectors).mouseout(fnCurryOut);
   }
@@ -178,16 +188,33 @@ $(function(){
   }
 
 
+  function jumpToPage(){
+    var strCurrUrl = window.location.href;
+    console.log("jumpToPage | strCurrUrl: ", strCurrUrl);
+    var arrParts = strCurrUrl.split("#");
 
+    if (arrParts.length > 1){
+      var strPage = arrParts.pop();
+      var evt = null;
+      
+      console.log("jumpToPage | strPage: ", strPage);
+
+      switchToPage(evt, strPage);
+    }
+    else{
+      console.log("jumpToPage | nothing to pop");
+    }
+
+
+  }
 
   function init(){
     console.log('line 32. init');
 
+    // addVisitor();
     initHandlers();
+    jumpToPage();
   }
-
-
-
 
     // script
 
