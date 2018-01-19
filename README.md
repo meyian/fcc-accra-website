@@ -23,13 +23,16 @@ _Things the Site Is Missing_
 * A Sign-In Page: For all that come to Coffee-and-Code, it would be very convenient to have a form on the website, where they can fill in details, like their name, phone number (for addition to the WhatsApp group), and freeCodeCamp username. (Difficulty: Easy/Intermediate) <br><br>
 * A Gallery Page/Upload Process: Every Saturday, at the end of Coffee-and-Code, we take a picture of those who attened. It would nice to have a gallery page on the site (Difficulty: Easy/Intermediate) <br><br>
 * (Critical) There is a way to scrape the freeCodeCamp website, enabling you to get a list of the challenges a user has completed. For freeCodeCamp Accra members who sign up on a form on our website, the goal is to create a page that shows the top 10 members each week in terms of challenges completed. The code is nearly finished, just needs a little push to get there (Difficulty: Intermediate)
+* Presentation Webpage with "Master Controls": Since we don't have a projector, and the freeCodeCamp facilitor is looking to present the "lecture notes" as slides, if a solution that would allow everyone to visit a page containing the presentation, which the presenter could control using his PC, that would be awesome! (Difficulty: Hard to say - an existing solution may be our answer) <br><br>
 
 
-_Fixing the Site Needs_
+_Fixing the Existing Site Functionality_
 
 * There's been an attempt to create a very rudimentary JavaScript router. It doesn't work fully. React Router is the best bet here, and refactoring to use React Router from the version @meyian wrote would be very cool... (Difficulty: Intermediate/Advanced) <br><br>
 
-* The site hasn't been throughly tested to be mobile device friendly. Ensuring that the website looks good on a mobile device is a key goal for us, down the line. (Difficulty: Intermediate/Advanced)
+* The site hasn't been throughly tested to be mobile device friendly. Ensuring that the website looks good on a mobile device is a key goal for us, down the line. (Difficulty: Intermediate/Advanced)<br><br>
+
+* There is the most basic of site analytics, and visitor count data being recorded on the site. It'd be beneficial if someone could help track the site progress. (Difficulty: Basic/Intermediate)
 
 
 ## Ways You Can Help
