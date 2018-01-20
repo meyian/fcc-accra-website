@@ -4,7 +4,7 @@
 
 This is the GitHub page for the code for the freeCodeCamp Accra website.
 
-This is where it is, for now: [silly-porter.surge.sh](silly-porter.surge.sh)
+This is where it is, for now: [silly-porter.surge.sh](http://silly-porter.surge.sh)
 
 
 ## Ways You Can Help
@@ -13,7 +13,7 @@ This is where it is, for now: [silly-porter.surge.sh](silly-porter.surge.sh)
 
 * Please feel free to suggest any edits or improvements of the site, concerning the design.
 * If anything looks off, like a typo, or the site is not working as it should, please contact us, and let us know you've seen something off.
-* If there's any new content you'd like to add, or suggestions of new features the site coul have 
+* If there's any new content you'd like to add, or suggestions of new features the site could have 
 
 
 #### Coders
